@@ -1,89 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Inter", sans-serif;
     background-color: #E5E5E5;
 }
 
-header{
+.disable{
+    display: none;
+}
+
+.header {
     padding: 24px 16px;
 }
 
+.header__logo {
+    max-width: 100%;
+}
 
-/*Seccion de input texto y botones */
-main section{
+/* Seccion de input texto y botones */
+.main__input-section {
     padding: 56px 16px 0px 16px;
 }
 
-.contenedor-texto{
+.main__input-text {
     display: flex;
     flex-direction: column;
 }
 
-.contenedor-texto textarea{
+.main__textarea {
     border: none;
-    color: #0A3871;
     font-size: 32px;
     font-weight: 400;
+    color:#0A3871;
     font-family: "Inter", sans-serif;
     background-color: #E5E5E5;
+    min-height: 251px;
+    max-height: 500px;
+    margin-bottom: 64px;
 }
 
-.fa-circle-exclamation{
-    display: block;
+.main__textarea:focus {
+    outline: none;
+    border: 1px solid #0A3871;
 }
-.text-advertencia{
+
+.main__textarea::placeholder {
+    color: #0A3871;
+}
+
+.main__warning {
+    display: flex;
+    align-items: center;
+}
+
+.main__warning-icon {
+    display: inline;
+    color: #495057;
+    margin-right: 8px;
+}
+
+.main__warning-text {
     font-size: 12px;
     color: #495057;
+    display: inline;
 }
 
-.contenedor-botones{
+.main__buttons {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
+    margin-top: 16px;
 }
 
-.btn{
+.button {
     padding: 24px;
     border-radius: 24px;
-    border-color: #0A3871;
-    border-width: 1px;
+    border: 1px solid #0A3871;
     color: #0A3871;
     font-size: 16px;
     cursor: pointer;
 }
 
-.btn-encriptar{
+.button--encrypt {
     background-color: #0A3871;
     color: white;
 }
 
 /* Contenedor de resultado */
-.contenedor-resultado{
+.main__result-section {
     padding: 64px 24px 40px 24px;
 }
 
-.contendor-mensaje{
+.main__message-container {
     background-color: white;
     border-radius: 32px;
     padding: 32px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.contendor-mensaje h2{
+.main__message-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
     color: #343A40;
 }
 
-.contendor-mensaje p{
+.main__message-text {
     font-size: 16px;
     color: #495057;
+}
+
+.button-copiar{
+    background-color: white;
+   
 }
