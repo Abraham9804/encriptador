@@ -7,6 +7,7 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/8b871e522d.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="images/favicon.ico">
     </head>
 
     <body>
@@ -17,26 +18,34 @@
             <!--Contenedor de caja de texto y botones -->
             <section class="main__input-section">
                 <div class="main__input-text">
-                    <textarea class="main__textarea" placeholder="Ingrese el texto aqui" id="inputText"></textarea>
+                    <textarea class="main__textarea" placeholder="Ingrese el texto aqui" id="inputText" oninput="auto_grow(this)"></textarea>
                     
+                    
+                </div> 
+                <div class="main_container_buttons">
                     <div class="main__warning">
                         <i class="fa-solid fa-circle-exclamation main__warning-icon"></i> 
                         <p class="main__warning-text">Solo letras minúsculas y sin acentos</p>
                     </div>
-                </div> 
-                <div class="main__buttons">
-                    <button class="button button--encrypt" onclick="functEncrypt()">Encriptar</button>
-                    <button class="button">Desencriptar</button>
+                    <div class="main__buttons">
+                        <button class="button button--encrypt" onclick="functEncrypt()">Encriptar</button>
+                        <button class="button">Desencriptar</button>
+                    </div>
+                    
                 </div>
             </section>
             <!-- Contenedor que mostrara el resultado final -->
             <section class="main__result-section" id="main__result-section">
+                
                 <div class="main__message-container" id="message-container">
-                    <h2 class="main__message-title">Ningún mensaje fue encontrado</h2>
-                    <p class="main__message-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <img src="images/muneco.png" class="main__message-image">
+                    <div class="main__button-container">
+                        <h2 class="main__message-title">Ningún mensaje fue encontrado</h2>
+                        <p class="main__message-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
                 </div>
 
-                <div class="main__message-container disable" id="result-container">
+                <div class="main__result-container disable" id="result-container">
                     <p class="main__texto-resultado" id="parrafoResult"></p>
                     <button class="button button-copiar">Copiar</button>
                 </div>
@@ -44,6 +53,9 @@
 
         </main>
 
+        <footer>
+            <a href="https://www.linkedin.com/in/abraham-romero9804"> Abraham Romero <i class="fab fa-linkedin"></i></a>
+        </footer>
         <script src="app.js"></script>
     </body>
 </html>

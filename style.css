@@ -8,13 +8,14 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: #E5E5E5;
+    background-color: #F3F5FC;
 }
 
 
 
 .header {
     padding: 24px 16px;
+    display: inline-block;
 }
 
 .header__logo {
@@ -37,15 +38,17 @@ body {
     font-weight: 400;
     color:#0A3871;
     font-family: "Inter", sans-serif;
-    background-color: #E5E5E5;
+    background-color: #F3F5FC;
     min-height: 251px;
-    max-height: 500px;
+    max-height: auto;
     margin-bottom: 64px;
+    resize: none;
+    overflow: hidden;
 }
 
 .main__textarea:focus {
     outline: none;
-    border: 1px solid #0A3871;
+    border: none;
 }
 
 .main__textarea::placeholder {
@@ -83,6 +86,7 @@ body {
     color: #0A3871;
     font-size: 16px;
     cursor: pointer;
+    background-color: #F3F5FC;
 }
 
 .button--encrypt {
@@ -99,7 +103,19 @@ body {
     background-color: white;
     border-radius: 32px;
     padding: 32px;
-    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main__message-image{
+    display: none;
+}
+
+.main__result-container{
+    background-color: white;
+    border-radius: 32px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
 }
@@ -131,6 +147,25 @@ body {
 
 .disable{
     display: none;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    background-color: #0A3871;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 
@@ -167,12 +202,93 @@ body {
         width: 332px;
     }
 
+    .main__message-container{
+        align-items: center;
+    }
    
+    .main__result-container{
+        align-items: center;
+    }
 
     .button-copiar{
         background-color: white;
         width: 624px;
+        text-align: center;
     }
 
     
+}
+
+
+/* Estilos desktop */
+@media screen and (min-width: 1440px){
+
+    .main{
+        position: relative;
+        display: flex;  
+        flex-direction: row;
+        justify-content: center;
+        height:auto;
+    }
+
+    .main__input-section{
+        width: 680px;
+        max-height: 800px;
+        padding:50px 0px 70px 0px;
+        margin-right: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main__input-text{
+        width: 100%;
+    }
+
+    .main__warning{
+        display: block;
+    }
+
+    .main__buttons{
+        width: 100%;
+    }
+
+    .main__message-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: -40px;
+        width:400px;
+        height: 800px;
+    }
+
+    .main__message-image{
+        display: block;
+    }
+
+    .main__message-container img {
+        padding-bottom: 36px;
+    }
+
+    .main__result-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main__result-section{
+        width: 400px;
+        min-height: 944px;
+    }
+
+    .button-copiar{
+        width: 336px;
+    }
+    
+    .disable{
+        display: none;
+    }
 }
