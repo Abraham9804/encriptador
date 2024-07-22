@@ -12,8 +12,6 @@ body {
     height: 100%;
 }
 
-
-
 .header {
     padding: 24px 16px;
     display: inline-block;
@@ -22,6 +20,7 @@ body {
 .header__logo {
     max-width: 100%;
 }
+
 
 /* Seccion de input texto y botones */
 .main__input-section {
@@ -95,6 +94,8 @@ body {
     color: white;
 }
 
+
+
 /* Contenedor de resultado */
 .main__result-section {
     padding: 64px 24px 40px 24px;
@@ -161,8 +162,6 @@ footer{
     align-items: center;
 }
 
-
-
 footer a{
     color: white;
     text-decoration: none;
@@ -172,27 +171,24 @@ footer a{
 
 
 /*Estilos para tablet */
-
 @media screen and (min-width: 768px){
-    .header {
+    .header{
         padding: 73px 24px 0px 40px;
     }
 
-    .main__input-section {
+    .main__input-section{
         padding: 116px 40px 0px 40px;
     }
 
 
 
     /* Contenedor de resultado */
-    .main__result-section {
+    .main__result-section{
         padding: 64px 40px 40px 40px;
         text-align: center;
     }
 
-
-
-    .main__buttons {
+    .main__buttons{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -215,15 +211,13 @@ footer a{
         background-color: white;
         width: 624px;
         text-align: center;
-    }
-
-    
+    }  
 }
 
 
 /* Estilos desktop */
 @media screen and (min-width: 1440px){
-
+    /* Contenedor de input texto y botones */
     .main{
         position: relative;
         display: flex;  
@@ -254,6 +248,8 @@ footer a{
         width: 100%;
     }
 
+
+    /* Contenedor de mensaje y resultado */
     .main__message-container{
         display: flex;
         flex-direction: column;

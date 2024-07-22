@@ -1,3 +1,4 @@
+// Inicializacion de constantes y variables
 let textArea = ''
 const messageContainer = document.querySelector("#message-container")
 const resultContainer = document.querySelector("#result-container")
@@ -5,29 +6,35 @@ const parrafoResultContainer = document.querySelector("#parrafoResult")
 const secctionReseult = document.querySelector("#main__result-section")
 const buttonCopy = document.querySelector("#button-copy")
 
+
+
+//Funcion que se ejecuta al dar click en encriptar
 function functEncrypt(){
-    //capturar texto del input
+    //obtener texto del textarea
     textArea = document.querySelector("#inputText").value
+
+    //Llamado a funcion para mostrar texto encriptado
     mostrarTexto()
 }
 
 function mostrarTexto(){
-    //cambiar estilos del contenedor 
-    secctionReseult.style.padding = "64px 16px 40px 16px"
-
+    let textoEncriptado = encriptarText(textArea);
+    console.log(textoEncriptado)
+    
+    //cambiar estilos del contenedor para mobile
+    if(window.innerWidth < 768){
+        secctionReseult.style.padding = "64px 16px 40px 16px"
+    }
+    
+    //Ocultar y mostrar mensaje y texto ingresado 
     if(resultContainer.classList.contains("disable")){
-        //Ocultar mensaje 
         messageContainer.classList.toggle("disable")
-
-        //Mostrar texto ingresado
         resultContainer.classList.toggle("disable")
-        parrafoResultContainer.innerText = textArea  
+        parrafoResultContainer.innerText = textoEncriptado  
     }else{
-        //concatenar texto nuevo ingresado
-        parrafoResultContainer.innerText = textArea
+        parrafoResultContainer.innerText = textoEncriptado
     }
 
-    //Mandar a llamar la funcion para copiar
     buttonCopy.addEventListener("click", copyText)
 }
 
@@ -63,3 +70,23 @@ function copyText(){
               });
         })
   }
+
+
+//Funcion para encriptar 
+
+function encriptarText(str){
+    return str.replace(/[aeiou]/gi, function(match){
+            switch(match.toLowerCase()){
+                case 'a':
+                    return 'enter';
+                case 'e':
+                    return 'imes';
+                case 'i':
+                    return 'ai';
+                case 'o':
+                    return 'ober';
+                case 'u':
+                    return 'ufat';
+            }
+        })
+}
