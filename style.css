@@ -9,6 +9,7 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #F3F5FC;
+    height: 100%;
 }
 
 
@@ -272,11 +273,13 @@ footer a{
     }
 
     .main__result-container{
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: absolute;
+        top: -40px;
+        width:400px;
+        height: 800px;
     }
 
     .main__result-section{
