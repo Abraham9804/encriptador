@@ -23,6 +23,9 @@ body {
 
 
 /* Seccion de input texto y botones */
+main{
+    min-height: 100vh;
+}
 .main__input-section {
     padding: 56px 16px 0px 16px;
 }
