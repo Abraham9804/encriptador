@@ -92,11 +92,11 @@ function encriptarText(str){
     return str.replace(/[aeiou]/gi, function(match){
             switch(match.toLowerCase()){
                 case 'a':
-                    return 'enter';
-                case 'e':
-                    return 'imes';
-                case 'i':
                     return 'ai';
+                case 'e':
+                    return 'enter';
+                case 'i':
+                    return 'imes';
                 case 'o':
                     return 'ober';
                 case 'u':
@@ -110,11 +110,11 @@ function encriptarText(str){
 function desencriptarTexto(encryptedStr){
     return encryptedStr.replace(/enter|imes|ai|ober|ufat/gi, function(match){
         switch(match.toLowerCase()){
-            case 'enter':
-                return 'a';
-            case 'imes':
-                return 'e';
             case 'ai':
+                return 'a';
+            case 'enter':
+                return 'e';
+            case 'imes':
                 return 'i';
             case 'ober':
                 return 'o';
