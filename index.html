@@ -19,7 +19,7 @@
             <!--Contenedor de caja de texto y botones -->
             <section class="main__input-section">
                 <div class="main__input-text">
-                    <textarea class="main__textarea" placeholder="Ingrese el texto aqui" id="inputText" oninput="auto_grow(this)"></textarea>
+                    <textarea class="main__textarea" placeholder="Ingrese el texto aqui" id="inputText" oninput="auto_grow(this)" maxlength="100"></textarea>
                 </div> 
 
                 <div class="main_container_buttons">
@@ -28,8 +28,8 @@
                         <p class="main__warning-text">Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="main__buttons">
-                        <button class="button button--encrypt" onclick="btnFunctEncrypt()">Encriptar</button>
-                        <button class="button" onclick="btnFunDesencrypt()">Desencriptar</button>
+                        <button class="button button--encrypt" id="btn-encript">Encriptar</button>
+                        <button class="button" id="btn-desencript">Desencriptar</button>
                     </div>
                 </div>
             </section>

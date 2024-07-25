@@ -4,7 +4,11 @@ const resultContainer = document.querySelector("#result-container")
 const parrafoResultContainer = document.querySelector("#parrafoResult")
 const secctionReseult = document.querySelector("#main__result-section")
 const buttonCopy = document.querySelector("#button-copy")
+const btnEncript = document.querySelector("#btn-encript")
+const btnDesencript = document.querySelector("#btn-desencript")
 
+btnEncript.addEventListener("click", btnFunctEncrypt)
+btnDesencript.addEventListener("click", btnFunDesencrypt)
 
 
 //Funcion que se ejecuta al dar click en boton encriptar
